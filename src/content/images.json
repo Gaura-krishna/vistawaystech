@@ -1,0 +1,173 @@
+{
+  "hero": {
+    "file": "hero.jpg",
+    "ratio": "16 / 9",
+    "size": "1920x1080",
+    "fallback": "about",
+    "label": "Hero",
+    "brief": "Wide, bright shot of a modern technology team at work (laptops, screens, collaboration). Keep the subject centered; the top edge is shown in a rounded frame.",
+    "alt": "Diverse team of IT professionals collaborating on software and engineering work in a modern office"
+  },
+  "about-team": {
+    "file": "about-team.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "about",
+    "label": "Home introduction",
+    "brief": "Consultants or engineers discussing a project around a table with laptops.",
+    "alt": "Consultants and engineers discussing a technology project around a table with laptops"
+  },
+  "why-partner": {
+    "file": "why-partner.jpg",
+    "ratio": "4 / 5",
+    "size": "1000x1250",
+    "fallback": "about",
+    "label": "Why partner",
+    "brief": "Portrait-oriented photo showing a client and delivery team meeting, handshake or reviewing a plan. Leave the bottom 25% fairly clean: a text card overlaps it.",
+    "alt": "Client and delivery team reviewing a project plan together, conveying a long-term partnership"
+  },
+  "about-office": {
+    "file": "about-office.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "about",
+    "label": "About Us",
+    "brief": "Cross-functional team in a planning session or workshop.",
+    "alt": "Cross-functional technology team in a planning workshop"
+  },
+  "careers-team": {
+    "file": "careers-team.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "about",
+    "label": "Careers",
+    "brief": "Young professionals collaborating in a shared workspace; positive, inclusive team culture.",
+    "alt": "Young professionals collaborating at a shared workspace, showing an inclusive team culture"
+  },
+  "svc-software-development": {
+    "file": "svc-software-development.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "software",
+    "label": "Software Development - intro",
+    "brief": "Like the live page: two colleagues looking at a laptop screen together.",
+    "alt": "Two developers collaborating at a laptop in a modern office, reviewing application code"
+  },
+  "svc-software-development-why": {
+    "file": "svc-software-development-why.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "software",
+    "label": "Software Development - why choose",
+    "brief": "Close-up of hands on a laptop with code on screen, moody/dark lighting.",
+    "alt": "Hands typing on a laptop displaying glowing code on a dark screen"
+  },
+  "svc-staffing-services": {
+    "file": "svc-staffing-services.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "staffing",
+    "label": "Staffing Services - intro",
+    "brief": "Smiling professional in the foreground, colleagues collaborating behind.",
+    "alt": "Confident recruiter holding a clipboard in a bright office with a team meeting behind her"
+  },
+  "svc-staffing-services-why": {
+    "file": "svc-staffing-services-why.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "staffing",
+    "label": "Staffing Services - why choose",
+    "brief": "Group of 3-4 colleagues at a table with a laptop; friendly, inclusive.",
+    "alt": "Team of professionals collaborating around a laptop at an office table"
+  },
+  "svc-cloud-services": {
+    "file": "svc-cloud-services.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "cloud",
+    "label": "Cloud Services - intro",
+    "brief": "Conceptual cloud-technology shot: hand + glowing cloud graphic, dark blue.",
+    "alt": "Glowing cloud icon with a download arrow floating above an open hand in front of a laptop"
+  },
+  "svc-cloud-services-why": {
+    "file": "svc-cloud-services-why.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "cloud",
+    "label": "Cloud Services - why choose",
+    "brief": "Person working on a laptop with a cloud/network graphic overlay.",
+    "alt": "Engineer at a laptop with glowing cloud-computing icons floating above the screen"
+  },
+  "svc-embedded-systems": {
+    "file": "svc-embedded-systems.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "embedded",
+    "label": "Embedded Systems - intro",
+    "brief": "Macro shot of an engineer handling a circuit board.",
+    "alt": "Close-up of hands placing a chip on a circuit board with electronic components"
+  },
+  "svc-embedded-systems-why": {
+    "file": "svc-embedded-systems-why.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "embedded",
+    "label": "Embedded Systems - why choose",
+    "brief": "Macro of a processor chip on a PCB with blue light.",
+    "alt": "Futuristic microchip glowing on a blue circuit board"
+  },
+  "svc-banking-financial-solutions": {
+    "file": "svc-banking-financial-solutions.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "banking",
+    "label": "Banking & Financial - intro",
+    "brief": "Hands holding a phone with a finance app, laptop in background.",
+    "alt": "Person using a banking app on a smartphone while working at a laptop"
+  },
+  "svc-banking-financial-solutions-why": {
+    "file": "svc-banking-financial-solutions-why.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "banking",
+    "label": "Banking & Financial - why choose",
+    "brief": "Clean desk with a screen showing an online banking dashboard.",
+    "alt": "Desktop monitor showing an online banking interface on a desk"
+  },
+  "svc-mechanical-engineering-services": {
+    "file": "svc-mechanical-engineering-services.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "mechanical",
+    "label": "Mechanical Engineering - intro",
+    "brief": "Engineer in PPE with a laptop, factory floor behind.",
+    "alt": "Engineer wearing a safety helmet reviewing a laptop next to industrial machinery"
+  },
+  "svc-mechanical-engineering-services-why": {
+    "file": "svc-mechanical-engineering-services-why.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "mechanical",
+    "label": "Mechanical Engineering - why choose",
+    "brief": "Pair of engineers at a machine or control cabinet.",
+    "alt": "Two engineers inspecting industrial equipment with a laptop"
+  },
+  "svc-bpo-services": {
+    "file": "svc-bpo-services.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "bpo",
+    "label": "BPO Services - intro",
+    "brief": "Contact-center team at workstations.",
+    "alt": "Customer support agents wearing headsets in a contact center"
+  },
+  "svc-bpo-services-why": {
+    "file": "svc-bpo-services-why.jpg",
+    "ratio": "4 / 3",
+    "size": "1200x900",
+    "fallback": "bpo",
+    "label": "BPO Services - why choose",
+    "brief": "Team reviewing work together at desks.",
+    "alt": "Operations team collaborating at workstations in a business process outsourcing office"
+  }
+}

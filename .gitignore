@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Environment variables
+.env
+.env.*
+.env*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Gemini / Antigravity IDE
+C:/Users/gaura/.gemini/antigravity-ide/data/jobs.json
+data/jobs.json.tmp

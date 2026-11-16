@@ -1,0 +1,20 @@
+.wrap { max-width: 1100px; margin-inline: auto; }
+.top { display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: space-between; align-items: center; margin-bottom: var(--space-6); }
+.top h1 { font-size: var(--fs-h2); margin: 0; }
+.actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.note { padding: var(--space-4) var(--space-5); background: #fff; border: 1px solid var(--color-border); border-left: 4px solid var(--color-teal-500); border-radius: var(--radius-sm); margin-bottom: var(--space-5); font-size: var(--fs-small); color: var(--color-text-muted); }
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.item { display: grid; gap: var(--space-3); padding: var(--space-5); background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+@media (min-width: 768px) { .item { grid-template-columns: 1fr auto; align-items: center; } }
+.item h2 { font-size: 1.125rem; margin: 0 0 4px; }
+.sub { color: var(--color-text-muted); font-size: var(--fs-small); }
+.badge { display: inline-block; padding: 2px 10px; border-radius: var(--radius-pill); font-size: .75rem; font-weight: 700; margin-left: var(--space-2); background: #e2f6f6; color: #00595c; vertical-align: middle; }
+.draft { background: #fdeccf; color: #7a4300; }
+.rowBtns { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.sm { min-height: 38px; padding: 0 16px; font-size: .875rem; }
+.danger { color: #b3261e; border-color: #b3261e; }
+.danger:hover { background: #b3261e; color: #fff; border-color: #b3261e; }
+.form { display: grid; gap: 20px; padding: var(--space-6); background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+.grid2 { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.hint { font-size: var(--fs-small); color: var(--color-text-muted); margin: -8px 0 0; }
+.login { max-width: 420px; margin: 0 auto; padding: var(--space-6); background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); display: grid; gap: 20px; }

@@ -1,0 +1,36 @@
+.header { position: sticky; top: 0; z-index: 1100; background: rgba(244,245,247,.86); -webkit-backdrop-filter: saturate(180%) blur(14px); backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid transparent; transition: border-color var(--dur-base), box-shadow var(--dur-base); }
+.scrolled { border-bottom-color: var(--color-border); box-shadow: var(--shadow-sm); }
+.bar { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+.logo { display: block; flex-shrink: 0; line-height: 0; }
+.logo img { height: 48px; width: auto; }
+.nav { display: none; }
+.actions { display: none; }
+@media (min-width: 1024px) {
+  .nav { display: flex; align-items: center; gap: var(--space-2); }
+  .actions { display: block; }
+  .burger { display: none !important; }
+}
+.link, .trigger { position: relative; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 var(--space-4); background: none; border: 0; cursor: pointer;
+  font-family: var(--font-heading); font-weight: 600; font-size: .9375rem; color: var(--color-navy-900); text-decoration: none; }
+.link::after, .trigger::after { content: ''; position: absolute; left: var(--space-4); right: var(--space-4); bottom: 6px; height: 2px; background: var(--color-teal-500); transform: scaleX(0); transform-origin: left; transition: transform var(--dur-base) var(--ease-out); }
+.link:hover::after, .trigger:hover::after, .active::after { transform: scaleX(1); }
+.chev { width: 10px; height: 10px; transition: transform var(--dur-base); }
+.open .chev { transform: rotate(180deg); }
+.item { position: relative; }
+.mega { position: absolute; top: 100%; left: 50%; transform: translate(-50%, 8px); width: min(720px, 90vw); background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg); padding: var(--space-5); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-1); opacity: 0; visibility: hidden; transition: opacity var(--dur-base), transform var(--dur-base) var(--ease-out), visibility var(--dur-base); }
+.open .mega { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.megaLink { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); text-decoration: none; color: var(--color-navy-900); font-family: var(--font-heading); font-weight: 600; font-size: .9375rem; }
+.megaLink:hover, .megaLink:focus-visible { background: var(--color-bg); }
+.dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+.dot-purple { background: var(--color-purple-600); } .dot-orange { background: var(--color-orange-500); }
+.dot-teal { background: var(--color-teal-500); } .dot-lime { background: var(--color-lime-500); }
+.megaAll { grid-column: 1 / -1; margin-top: var(--space-2); padding-top: var(--space-3); border-top: 1px solid var(--color-border); }
+.burger { width: 48px; height: 48px; display: grid; place-items: center; background: none; border: 1px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; color: var(--color-navy-900); }
+.drawer { width: min(86vw, 360px); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+.drawerTop { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4); }
+.mLink { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 52px; padding: 0 var(--space-3); background: none; border: 0; border-bottom: 1px solid var(--color-border); text-align: left;
+  font-family: var(--font-heading); font-weight: 700; font-size: 1.0625rem; color: var(--color-navy-900); text-decoration: none; cursor: pointer; }
+.mActive { color: var(--color-teal-700); }
+.mSub { display: flex; flex-direction: column; padding: var(--space-2) 0 var(--space-2) var(--space-4); }
+.mSub a { display: flex; align-items: center; gap: var(--space-3); min-height: 46px; text-decoration: none; color: var(--color-text); font-weight: 500; }
