@@ -1,16 +1,266 @@
-.footer { background: var(--color-navy-900); color: var(--color-on-dark-muted);  }
-.grid { display: grid; gap: var(--space-7); grid-template-columns: 1fr; padding-top: var(--space-5);padding-bottom: var(--space-8); }
-@media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .grid { grid-template-columns: 1.4fr 1fr 1.2fr 1fr; } }
-.brand { background: #fff; display: inline-block; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); line-height: 0; margin-bottom: var(--space-4); }
-.brand img { height: 40px; width: auto; }
-.footer h2 { font-size: .8125rem; letter-spacing: .12em; text-transform: uppercase; color: #fff; margin-bottom: var(--space-4); }
-.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-1); }
-.footer a { color: var(--color-on-dark-muted); text-decoration: none; display: inline-block; padding: var(--space-1) 0; }
-.footer a:hover, .footer a:focus-visible { color: #fff; text-decoration: underline; }
-.bottom { border-top: 1px solid rgba(255,255,255,.12); padding-block: var(--space-5); display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: space-between; font-size: var(--fs-small); }
+/* =====================================================================
+   Footer – VISTAWAYS TECH
+   Maintains existing navy/teal brand identity; adds office cards,
+   global presence list, and scroll-reveal animation.
+   ===================================================================== */
+
+/* ---------- Wrapper ---------- */
+.footer {
+  background: var(--color-navy-900);
+  color: var(--color-on-dark-muted);
+}
+
+/* ---------- Coloured top stripe ---------- */
 .stripe { display: flex; height: 4px; }
 .stripe i { flex: 1; }
-.stripe i:nth-child(1) { background: var(--color-teal-500); } .stripe i:nth-child(2) { background: var(--color-orange-500); }
-.stripe i:nth-child(3) { background: var(--color-lime-500); } .stripe i:nth-child(4) { background: var(--color-purple-600); }
-.pending { font-size: var(--fs-small); opacity: .8; }
+.stripe i:nth-child(1) { background: var(--color-teal-500); }
+.stripe i:nth-child(2) { background: var(--color-orange-500); }
+.stripe i:nth-child(3) { background: var(--color-lime-500); }
+.stripe i:nth-child(4) { background: var(--color-purple-600); }
+
+/* ---------- Main link grid ---------- */
+.grid {
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: 1fr;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-7);
+}
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: 1.6fr 1fr 1.3fr 1.1fr; } }
+
+/* ---------- Brand column ---------- */
+.brandCol { display: flex; flex-direction: column; gap: var(--space-3); }
+.brand {
+  background: #fff;
+  display: inline-block;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  line-height: 0;
+  margin-bottom: var(--space-2);
+  transition: opacity var(--dur-base);
+}
+.brand:hover { opacity: .88; }
+.brand img { height: 40px; width: auto; }
+.tagline { font-size: .9rem; line-height: 1.6; color: var(--color-on-dark-muted); margin: 0; max-width: 30ch; }
+.emailLink { color: var(--color-on-dark-muted); text-decoration: none; font-size: var(--fs-small); display: inline-block; border-bottom: 1px solid rgba(255,255,255,.15); padding-bottom: 1px; }
+.emailLink:hover { color: #fff; border-color: #fff; }
+
+/* ---------- Shared nav heading ---------- */
+.colHeading {
+  font-size: .8125rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- Nav lists ---------- */
+.navList { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-1); }
+.navList a { color: var(--color-on-dark-muted); text-decoration: none; display: inline-block; padding: var(--space-1) 0; font-size: var(--fs-small); transition: color var(--dur-base); }
+.navList a:hover, .navList a:focus-visible { color: #fff; }
+
+/* ---------- Contact list ---------- */
+.contactList { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.contactList li { display: flex; align-items: flex-start; gap: var(--space-2); font-size: var(--fs-small); }
+.contactIcon { flex-shrink: 0; margin-top: 2px; color: var(--color-teal-500); }
+.contactList a { color: var(--color-on-dark-muted); text-decoration: none; transition: color var(--dur-base); }
+.contactList a:hover { color: #fff; }
+.contactList address { color: var(--color-on-dark-muted); line-height: 1.55; }
+.contactBadge {
+  display: inline-block;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: var(--color-teal-500);
+  color: var(--color-navy-950);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* ---------- Socials ---------- */
+.socials { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.socials a { color: var(--color-on-dark-muted); text-decoration: none; font-size: var(--fs-small); font-weight: 600; border: 1px solid rgba(255,255,255,.18); padding: 4px 10px; border-radius: var(--radius-pill); transition: color var(--dur-base), border-color var(--dur-base); }
+.socials a:hover { color: #fff; border-color: rgba(255,255,255,.5); }
+
+/* =======================================================================
+   Offices & Global Presence band
+   ======================================================================= */
+.officesBand {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-block: var(--space-7);
+}
+.officesBandInner {}
+
+.officesRow {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) { .officesRow { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .officesRow { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Individual office card ---------- */
+.officeCard {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    background var(--dur-base) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out),
+    opacity var(--dur-slow) var(--ease-out);
+
+  /* scroll-reveal start state */
+  opacity: 0;
+  transform: translateY(22px);
+}
+.officeCard:hover {
+  background: rgba(255,255,255,.07);
+  border-color: rgba(255,255,255,.2);
+}
+/* revealed class applied by JS */
+.revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ---------- Office card header ---------- */
+.officeCardHead {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.officeFlag {
+  font-size: 1.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.globeIcon {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  color: var(--color-teal-500);
+  margin-top: 4px;
+}
+.hqBadge {
+  display: inline-block;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-teal-500);
+  border: 1px solid var(--color-teal-500);
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-1);
+}
+.officeLabelSmall {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-on-dark-muted);
+  margin-bottom: var(--space-1);
+}
+.officeCountry {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -.01em;
+}
+
+/* ---------- Office detail rows ---------- */
+.officeDetails {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.officeDetails li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--fs-small);
+  line-height: 1.55;
+}
+.detailIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-teal-500);
+  opacity: .8;
+}
+.officeDetails address,
+.officeDetails a {
+  color: var(--color-on-dark-muted);
+  text-decoration: none;
+  transition: color var(--dur-base);
+}
+.officeDetails a:hover { color: #fff; }
+
+/* ---------- Global presence list ---------- */
+.presenceCard { }
+.presenceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.presenceItem,
+.presenceItemHQ {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-small);
+  color: var(--color-on-dark-muted);
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: color var(--dur-base);
+}
+.presenceItem:last-child,
+.presenceItemHQ:last-child { border-bottom: 0; }
+.presenceItemHQ { color: #fff; font-weight: 600; }
+.presenceFlag { font-size: 1.1rem; line-height: 1; }
+.hqTag {
+  display: inline-block;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: var(--color-teal-500);
+  color: var(--color-navy-950);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ---------- Bottom bar ---------- */
+.bottom {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-block: var(--space-5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: space-between;
+  font-size: var(--fs-small);
+  color: var(--color-on-dark-muted);
+}
+.bottom a { color: var(--color-on-dark-muted); text-decoration: none; transition: color var(--dur-base); }
+.bottom a:hover { color: #fff; }
+
+/* ---------- Accessibility: Respects reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .officeCard { opacity: 1; transform: none; transition: none; }
+}

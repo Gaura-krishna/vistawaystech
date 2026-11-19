@@ -10,10 +10,34 @@ export const site = {
   contact: {
     email: 'info@vistawaystech.com',
     phone: '+91 7995654433',
-    address: '#801 & 802, Manjeera Majestic Commercials, Opp. JNTU, HITEC City Road, Hyderabad – 500085',
+    address: '621, 6th Floor, Manjeera Majestic Commercials, Opp. JNTU, HITEC City Road, Hyderabad – 500072',
   },
   social: { linkedin: null, facebook: null, x: null, instagram: null }, // not exposed on the live site: pending
   description: 'VISTAWAYS TECH creates innovative IT and engineering solutions that help businesses transform, grow and succeed in the digital era.',
+  offices: {
+    hq: {
+      label: 'Headquarters – United Kingdom',
+      address: '14 Harrow Place, London, England, E1 7DB',
+      phone: '+44 7417375589',
+      flag: '🇬🇧',
+      country: 'United Kingdom',
+      isHQ: true,
+    },
+    india: {
+      label: 'India Office',
+      address: '621, 6th Floor, Manjeera Majestic Commercials, Opp. JNTU, HITEC City Road, Hyderabad – 500072',
+      phone: '+91 7995654433',
+      flag: '🇮🇳',
+      country: 'India',
+    },
+  },
+  globalPresence: [
+    { country: 'United Kingdom', flag: '🇬🇧', isHQ: true },
+    { country: 'United States', flag: '🇺🇸' },
+    { country: 'South Africa', flag: '🇿🇦' },
+    { country: 'United Arab Emirates', flag: '🇦🇪' },
+    { country: 'India', flag: '🇮🇳' },
+  ],
 };
 
 // Service pages: content transcribed from the live service pages (screenshots supplied by the client).
